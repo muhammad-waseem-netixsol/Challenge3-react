@@ -7,7 +7,7 @@ const Random = () => {
   const [error, setError] = useState(false);
   // function to fecth
   const fetchRandomNumber = async () => {
-    fetch('/api/random').then(resp => resp.json()).then(data => {
+    fetch('https://resp-api-5x1z.vercel.app/api/random').then(resp => resp.json()).then(data => {
       setRandomNumber(data.randomNumber);
       setError(false);
     }).catch(err => {
